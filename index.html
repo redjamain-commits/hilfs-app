@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hilfs-App gegen Depression</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header>
+      <h1>Hilfs-App gegen Depression</h1>
+      <p>Ein einfacher Begleiter für schwierige Tage. Diese App ersetzt keine professionelle Hilfe.</p>
+    </header>
+
+    <main>
+      <section class="card mood-card">
+        <h2>Wie fühlst du dich heute?</h2>
+        <div class="mood-slider-wrap">
+          <input id="moodSlider" type="range" min="0" max="10" value="5" />
+          <div class="mood-labels">
+            <span>Schlecht</span>
+            <span>Neutral</span>
+            <span>Gut</span>
+          </div>
+        </div>
+        <p class="mood-value">Stimmung: <strong id="moodValue">5</strong>/10</p>
+        <button id="saveMoodBtn" class="primary-btn">Stimmung speichern</button>
+      </section>
+
+      <section class="card journal-card">
+        <h2>Tagebuch</h2>
+        <textarea id="journalInput" rows="6" placeholder="Schreibe hier, wie du dich fühlst..."></textarea>
+        <button id="saveJournalBtn" class="primary-btn">Speichern</button>
+        <div id="journalStatus" class="status"></div>
+        <div id="analysisCard" class="analysis-card hidden">
+          <h3>Persönliche Empfehlungen</h3>
+          <p id="analysisSummary"></p>
+          <ul id="analysisTips"></ul>
+          <p id="analysisReminder" class="analysis-note"></p>
+        </div>
+      </section>
+
+      <section class="card breathing-card">
+        <h2>Atemübung</h2>
+        <p>Nutze diese kurze Atemübung, um dich zu beruhigen:</p>
+        <ol>
+          <li>Atme 4 Sekunden ein.</li>
+          <li>Halte 4 Sekunden.</li>
+          <li>Atme 6 Sekunden aus.</li>
+          <li>Wiederhole 3–5 Mal.</li>
+        </ol>
+        <button id="startBreathingBtn" class="secondary-btn">Übung starten</button>
+        <p id="breathingMessage" class="breathing-message"></p>
+      </section>
+      <section class="card focus-card" id="focusCard">
+        <h2>Fokus-Timer</h2>
+        <p>2 Minuten positiv denken und Ziele visualisieren.</p>
+        <div id="timerDisplay" class="timer-display">02:00</div>
+        <button id="startFocusBtn" class="primary-btn">Timer starten</button>
+        <p id="promptMessage" class="prompt-message">Bereit? Denke an etwas Schönes oder an ein Ziel.</p>
+      </section>
+
+      <section class="card goal-card">
+        <h2>Tagesziel</h2>
+        <p>Notiere dir ein kleines Ziel für heute.</p>
+        <input id="goalInput" type="text" placeholder="Mein Ziel heute..." />
+        <button id="saveGoalBtn" class="primary-btn">Speichern</button>
+        <div id="goalStatus" class="status"></div>
+      </section>
+
+      <section class="card week-card">
+        <h2>Wochenübersicht</h2>
+        <p>Nutze die App regelmäßig, um eine positive Routine aufzubauen.</p>
+        <p class="week-counter">Diese Woche benutzt: <strong id="weekCount">0</strong> Tage</p>
+        <p id="weekMessage" class="status"></p>
+      </section>
+
+      <section class="card ai-card">
+        <h2>KI-Assistenz</h2>
+        <p>Stell eine Frage, erzähle kurz, wie es dir geht, und erhalte ermutigende Antworten.</p>
+        <textarea id="aiInput" rows="4" placeholder="Was möchtest du der KI sagen?"></textarea>
+        <button id="askAiBtn" class="primary-btn">Frage stellen</button>
+        <div id="aiResponse" class="ai-response hidden"></div>
+        <div id="aiFeedbackRow" class="ai-feedback-row hidden">
+          <p>Hat dir das Gespräch geholfen?</p>
+          <div class="feedback-buttons">
+            <button id="aiFeedbackBetter" class="secondary-btn">Besser</button>
+            <button id="aiFeedbackWorse" class="secondary-btn">Schlechter</button>
+          </div>
+          <p id="aiFeedbackResult" class="status"></p>
+        </div>
+        <p id="aiNote" class="analysis-note">Deine Antworten werden lokal verarbeitet; diese KI ersetzt keine professionelle Hilfe.</p>
+      </section>
+
+      <section class="card tips-card">
+        <h2>Sofortige Unterstützung</h2>
+        <ul>
+          <li>Sprich mit jemandem, dem du vertraust.</li>
+          <li>Bewege dich sanft, z. B. spazieren gehen.</li>
+          <li>Schreibe drei Dinge auf, für die du dankbar bist.</li>
+          <li>Nutze professionelle Hilfe bei starken Depressionen.</li>
+        </ul>
+      </section>
+
+      <section class="card resources-card">
+        <h2>Wichtiger Hinweis</h2>
+        <p>Wenn du dich in akuter Not befindest oder Suizidgedanken hast, such bitte sofort Hilfe.</p>
+        <p><strong>Notfallnummern</strong>:<br />Deutschland: 112<br />Deutschland, Telefonseelsorge: 0800 1110 111 oder 0800 1110 222</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Diese App dient als Unterstützung und Orientierung. Bei anhaltenden Beschwerden ist professionelle Hilfe wichtig.</p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

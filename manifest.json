@@ -1,0 +1,16 @@
+{
+  "name": "Hilfs-App gegen Depression",
+  "short_name": "Depressionshilfe",
+  "description": "Eine einfache App zur Unterstützung bei Depressionen",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4a90e2",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
